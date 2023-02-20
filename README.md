@@ -14,11 +14,11 @@ go get github.com/tinytoolkit/httputils
 
 The library provides functions for parsing query parameters in HTTP requests:
 
-`QueryString(r *http.Request, key string) string`: returns a string value for a query parameter.
-`QueryStrings(r *http.Request, key string) []string`: returns a slice of strings for a query parameter.
-`QueryInt(r *http.Request, key string) int`: returns an int value for a query parameter.
-`QueryInts(r *http.Request, key string) []int`: returns a slice of ints for a query parameter.
-`QueryBool(r *http.Request, key string) bool`: returns a bool value for a query parameter.
+- `QueryString(r *http.Request, key string) string`: returns a string value for a query parameter.
+- `QueryStrings(r *http.Request, key string) []string`: returns a slice of strings for a query parameter.
+- `QueryInt(r *http.Request, key string) int`: returns an int value for a query parameter.
+- `QueryInts(r *http.Request, key string) []int`: returns a slice of ints for a query parameter.
+- `QueryBool(r *http.Request, key string) bool`: returns a bool value for a query parameter.
 
 Here's an example of how to use these functions:
 
