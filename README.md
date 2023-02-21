@@ -25,10 +25,24 @@ Here's an example of how to use these functions:
 ```go
 func myHandler(w http.ResponseWriter, r *http.Request) {
     // Get a string query parameter
+    // key=foo => name = "foo"
     name := httputils.QueryString(r, "name")
     
+    // Get a slice of strings query parameter
+    // key=foo,bar => names = ["foo", "bar"]
+    names := httputils.QueryStrings(r, "names")
+
+    // Get an int query parameter
+    // key=1 => id = 1
+    id := httputils.QueryInt(r, "id")
+
     // Get a slice of ints query parameter
+    // key=1,2,3 => ids = [1, 2, 3]
     ids := httputils.QueryInts(r, "ids")
+
+    // Get a bool query parameter
+    // key=true => enabled = true
+    enabled := httputils.QueryBool(r, "enabled")
 }
 ```
 
